@@ -149,11 +149,32 @@ function countApplesAndOranges(s, t, a, b, apples, oranges) {
 }
 
 
-// 14.Number Line Jumps
+// 12.Number Line Jumps
 function kangaroo(x1, v1, x2, v2) {
     if (v1 < v2) return 'NO';
 
     if ((x2 - x1) % (v1 - v2) === 0) return 'YES';
     
     return 'NO';
+}
+
+
+// 13.Breaking the Records
+function breakingRecords(scores) {
+    let max = 0;
+    let min = 0;
+    let minScore = scores[0];
+    let maxScore = scores[0];
+    
+    scores.forEach((score) => {
+        if (score < minScore) {
+            minScore = score;
+            min++;
+        } else if (score > maxScore) {
+            maxScore = score;
+            max++;
+        }
+    })
+
+    return [max, min];
 }
