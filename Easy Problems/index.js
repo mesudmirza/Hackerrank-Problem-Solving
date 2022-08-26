@@ -10,7 +10,7 @@ function solveMeFirst(a, b) {
 function simpleArraySum(arr) {
     let sum = 0;
 
-    for (let i=0; i<arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         sum += arr[i];
     }
 
@@ -22,7 +22,7 @@ function simpleArraySum(arr) {
 function compareTriplets(a, b) {
     let points = [0, 0];
     
-    for (let i=0; i<a.length; i++) {
+    for (let i = 0; i < a.length; i++) {
         if (a[i] > b[i]) points[0]++;
         if (a[i] < b[i]) points[1]++;
     }
@@ -35,7 +35,7 @@ function compareTriplets(a, b) {
 function aVeryBigSum(arr) {
     let sum = 0;
     
-    for (let i=0; i<arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         sum += arr[i];
     }
     
@@ -48,7 +48,7 @@ function diagonalDifference(arr) {
     let leftDiagonal = 0;
     let rightDiagonal = 0;
     
-    for (let i=0; i<arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         leftDiagonal += arr[i][i];
         rightDiagonal += arr[i][arr.length - i - 1];
     }
@@ -64,7 +64,7 @@ function plusMinus(arr) {
     let negative = 0;
     let zero = 0;
     
-    for (let i=0; i<len; i++) {
+    for (let i = 0; i < len; i++) {
         if (arr[i]>0) {
             positive += 1;
         } else if (arr[i]<0) {
@@ -82,9 +82,9 @@ function plusMinus(arr) {
 
 // 7.Staircase
 function staircase(n) {
-    for (let i=0; i<n; i++) {
+    for (let i = 0; i < n; i++) {
         let text = '';
-        for (let j=0; j<n; j++) {
+        for (let j = 0; j < n; j++) {
             if (i+j>n-2) {
                 text += '#';
             } else {
@@ -93,4 +93,19 @@ function staircase(n) {
         }
         console.log(text);
     }
+}
+
+
+// 8.Mini-Max Sum
+function miniMaxSum(arr) {
+    const min = Math.min(...arr); 
+    const max = Math.max(...arr); 
+    let sum = 0;
+    
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    const minSum = sum - max;
+    const maxSum = sum - min;
+    console.log(minSum, maxSum);
 }
