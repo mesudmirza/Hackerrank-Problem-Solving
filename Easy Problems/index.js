@@ -147,3 +147,13 @@ function countApplesAndOranges(s, t, a, b, apples, oranges) {
     console.log(countApples);
     console.log(countOranges);
 }
+
+
+// 14.Number Line Jumps
+function kangaroo(x1, v1, x2, v2) {
+    if (v1 < v2) return 'NO';
+
+    if ((x2 - x1) % (v1 - v2) === 0) return 'YES';
+    
+    return 'NO';
+}
