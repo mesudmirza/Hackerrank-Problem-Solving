@@ -180,7 +180,7 @@ function breakingRecords(scores) {
 }
 
 
-// 16.Time Conversion
+// 14.Time Conversion
 function timeConversion(s) {
     let isAmOrPm = s.slice(-2);
     let hourString = s.slice(0,2);
