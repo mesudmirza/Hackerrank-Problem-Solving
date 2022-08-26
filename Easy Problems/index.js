@@ -178,3 +178,26 @@ function breakingRecords(scores) {
 
     return [max, min];
 }
+
+
+// 16.Time Conversion
+function timeConversion(s) {
+    let isAmOrPm = s.slice(-2);
+    let hourString = s.slice(0,2);
+    let hourNumber = Number(hourString);
+    let timeWithoutHour = s.slice(2,8);
+    
+    if (isAmOrPm === 'PM') {
+        hourNumber += 12;
+        if (hourString === '12') {
+            return `${hourString}${timeWithoutHour}`;
+        }
+        return `${hourNumber}${timeWithoutHour}`;
+    } else {
+        if (hourString === '12') {
+            return `00${timeWithoutHour}`;
+        }
+        let time = s.slice(0,8);
+        return time;
+    }
+}
