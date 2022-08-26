@@ -109,3 +109,16 @@ function miniMaxSum(arr) {
     const maxSum = sum - min;
     console.log(minSum, maxSum);
 }
+
+
+// 9.Birthday Cake Candles
+function birthdayCakeCandles(candles) {
+    let max = Math.max(...candles);
+    let count = 0;
+    
+    for (let i = 0; i < candles.length; i++) {
+        if (candles[i] === max) count += 1;
+    }
+    
+    return count;
+}
