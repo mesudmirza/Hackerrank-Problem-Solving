@@ -79,3 +79,18 @@ function plusMinus(arr) {
     console.log((zero/len).toFixed(6));
 }
 
+
+// 7.Staircase
+function staircase(n) {
+    for (let i=0; i<n; i++) {
+        let text = '';
+        for (let j=0; j<n; j++) {
+            if (i+j>n-2) {
+                text += '#';
+            } else {
+                text += ' ';
+            }
+        }
+        console.log(text);
+    }
+}
