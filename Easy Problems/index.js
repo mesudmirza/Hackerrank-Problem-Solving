@@ -122,3 +122,15 @@ function birthdayCakeCandles(candles) {
     
     return count;
 }
+
+
+// 10.Grading Students
+function gradingStudents(grades) {
+    return grades.map((n) => {
+        if ((n % 5) >= 3 && n >= 38) {
+            return n + (5 - (n % 5));
+        } else {
+            return n;
+        }
+    })
+}
