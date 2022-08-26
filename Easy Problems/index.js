@@ -134,3 +134,16 @@ function gradingStudents(grades) {
         }
     })
 }
+
+
+// 11.Apple and Orange
+function countApplesAndOranges(s, t, a, b, apples, oranges) {
+    let applesLocation = apples.map(n => n + a);
+    let orangesLocation = oranges.map(n => n + b);
+    
+    let countApples = applesLocation.filter(n => n >= s && n <= t).length;
+    let countOranges = orangesLocation.filter(n => n >= s && n <= t).length;
+    
+    console.log(countApples);
+    console.log(countOranges);
+}
