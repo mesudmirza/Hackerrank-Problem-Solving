@@ -203,7 +203,7 @@ function timeConversion(s) {
 }
 
 
-// 15.
+// 15.Subarray Division
 function birthday(s, d, m) {
     let count = 0;
     let sum = 0;
