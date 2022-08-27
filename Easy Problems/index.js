@@ -201,3 +201,20 @@ function timeConversion(s) {
         return time;
     }
 }
+
+
+// 15.
+function birthday(s, d, m) {
+    let count = 0;
+    let sum = 0;
+    
+    s.forEach((num, indice) => {
+        for(let i = indice; i < indice + m; i++){
+            sum += s[i];
+        } 
+
+        if (sum === d) count++;
+    })
+    
+    return count;
+}
