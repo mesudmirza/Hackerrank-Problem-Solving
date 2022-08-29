@@ -105,6 +105,7 @@ function miniMaxSum(arr) {
     for (let i = 0; i < arr.length; i++) {
         sum += arr[i];
     }
+
     const minSum = sum - max;
     const maxSum = sum - min;
     console.log(minSum, maxSum);
@@ -207,14 +208,29 @@ function timeConversion(s) {
 function birthday(s, d, m) {
     let count = 0;
     let sum = 0;
-    
+
     s.forEach((num, indice) => {
         for(let i = indice; i < indice + m; i++){
             sum += s[i];
-        } 
-
+        }
         if (sum === d) count++;
     })
-    
+
     return count;
+}
+
+
+// 16.Divisible Sum Pairs
+function divisibleSumPairs(n, k, ar) {
+    let output = [];
+
+    for (let i = 0; i < n; i++) {
+        for (let j = i + 1; j <= n; j++) {
+            if ((ar[i] + ar[j]) % k === 0) {
+                output.push([ar[i], ar[j]]);
+            }
+        }
+    }
+
+    return output.length;
 }
