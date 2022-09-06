@@ -252,3 +252,22 @@ function bonAppetit(bill, k, b) {
         console.log(b - total);
     }
 }
+
+
+// 18.Sales by Match
+function sockMerchant(n, ar) {
+    let sorted = ar.sort((a,b) => a-b);
+    let count = 0;
+    let total = 0;
+    
+    for (let i = 0; i <= n - 1; i += count) {
+        if (ar[i] == ar[i+1]) {
+            count = 2;
+            total++;
+        } else {
+            count = 1;
+        }
+    }
+
+    return total;
+}
