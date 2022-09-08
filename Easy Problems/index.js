@@ -321,3 +321,19 @@ function pageCount(n, p) {
     
     return result;
 }
+
+
+// 22.Counting Valleys
+function countingValleys(steps, path) {
+    let level = 0;
+    let valley = 0;
+    
+    for (let i = 0; i < path.length; i++) {
+        if (path[i] == 'U') level++;
+        else if (path[i] == 'D') level--;
+        
+        if (level == 0 && path[i] == 'U') valley++;
+    }
+
+    return valley;
+}
