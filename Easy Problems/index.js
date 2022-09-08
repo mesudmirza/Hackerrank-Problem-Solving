@@ -290,3 +290,16 @@ function getTotalX(a, b) {
     
     return count;
 }
+
+
+// 20.Migratory Birds
+function migratoryBirds(arr) {
+    let counts = {};
+
+    arr.forEach(elem => {
+        if (elem in counts) counts[elem]++;
+        else counts[elem] = 1;
+    })
+    
+    return parseInt(Object.keys(counts).reduce((a,b) => counts[a] >= counts[b] ? a : b)); 
+}
