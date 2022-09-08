@@ -271,3 +271,22 @@ function sockMerchant(n, ar) {
 
     return total;
 }
+
+
+// 19.Between Two Sets
+function getTotalX(a, b) {
+    let allNumbers = [...a, ...b];
+    let count = 0;
+    
+    for (let i = a[a.length - 1]; i <= b[0]; i += a[a.length - 1]) {
+        let valid = allNumbers.every(item => {
+            let max = Math.max(i, item);
+            let min = Math.min(i, item);
+            return max % min == 0;
+        })
+        
+        if (valid) count++;
+    }
+    
+    return count;
+}
