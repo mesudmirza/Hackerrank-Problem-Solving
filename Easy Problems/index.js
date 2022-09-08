@@ -337,3 +337,14 @@ function countingValleys(steps, path) {
 
     return valley;
 }
+
+
+// 23.Cats and a Mouse
+function catAndMouse(x, y, z) {
+    let catA = Math.max(x - z, z - x);
+    let catB = Math.max(y - z, z - y);
+    
+    if (catA > catB) return 'Cat B'
+    else if (catA < catB) return 'Cat A'
+    else return 'Mouse C'
+}
