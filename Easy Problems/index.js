@@ -303,3 +303,21 @@ function migratoryBirds(arr) {
     
     return parseInt(Object.keys(counts).reduce((a,b) => counts[a] >= counts[b] ? a : b)); 
 }
+
+
+// 21.Drawing Book
+function pageCount(n, p) {
+    let result = 0;
+            
+    if ((n - p) > p) {
+        result = Math.floor(p / 2);
+    } else {
+        result = Math.floor((n - p) / 2);
+    }
+    
+    if (((n - p) == 1) && !(n % 2) && p > 1) {
+        result++;
+    }
+    
+    return result;
+}
