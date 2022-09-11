@@ -326,16 +326,16 @@ function pageCount(n, p) {
 // 22.Counting Valleys
 function countingValleys(steps, path) {
     let level = 0;
-    let valley = 0;
+    let valleys = 0;
     
     for (let i = 0; i < path.length; i++) {
         if (path[i] == 'U') level++;
         else if (path[i] == 'D') level--;
         
-        if (level == 0 && path[i] == 'U') valley++;
+        if (level == 0 && path[i] == 'U') valleys++;
     }
 
-    return valley;
+    return valleys;
 }
 
 
@@ -344,7 +344,15 @@ function catAndMouse(x, y, z) {
     let catA = Math.max(x - z, z - x);
     let catB = Math.max(y - z, z - y);
     
-    if (catA > catB) return 'Cat B'
-    else if (catA < catB) return 'Cat A'
-    else return 'Mouse C'
+    if (catA > catB) return 'Cat B';
+    else if (catA < catB) return 'Cat A';
+    else return 'Mouse C';
+}
+
+
+// 24.The Hurdle Race
+function hurdleRace(k, height) {
+    let max = Math.max(...height);
+    if (max > k) return max - k;
+    else return 0;
 }
