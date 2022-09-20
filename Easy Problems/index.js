@@ -356,3 +356,18 @@ function hurdleRace(k, height) {
     if (max > k) return max - k;
     else return 0;
 }
+
+
+// 25.Viral Advertising
+function viralAdvertising(n) {
+    let liked = Math.floor(5/2);
+    let shared = liked * 3;
+    let cumulative = liked;
+
+    for (let i=1; i<n; i++) {
+        cumulative = cumulative + Math.floor(shared/2);
+        shared = Math.floor(shared/2) * 3;
+    }
+
+    return cumulative;
+}
