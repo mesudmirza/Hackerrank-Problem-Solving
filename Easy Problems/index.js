@@ -364,10 +364,23 @@ function viralAdvertising(n) {
     let shared = liked * 3;
     let cumulative = liked;
 
-    for (let i=1; i<n; i++) {
+    for (let i = 1; i < n; i++) {
         cumulative = cumulative + Math.floor(shared/2);
         shared = Math.floor(shared/2) * 3;
     }
 
     return cumulative;
+}
+
+
+// 26.Utopian Tree
+function utopianTree(n) {
+    let height = 1;
+
+    for (let  i = 0; i < n; i++) {
+        if (i % 2 == 0) height *= 2;
+        else height += 1;
+    }
+
+    return height;
 }
