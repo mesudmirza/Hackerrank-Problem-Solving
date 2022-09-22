@@ -410,3 +410,23 @@ function angryProfessor(k, a) {
     if (count < k) return 'YES';
     else return 'NO'; 
 }
+
+
+// 29.Electronics Shop
+function getMoneySpent(keyboards, drives, b) {
+    let prices = [];
+
+    for (let i = 0; i < keyboards.length; i++) {
+        for (let j = 0; j < drives.length; j++) {
+            let sum  = keyboards[i] + drives[j];
+            if (sum <= b) prices.push(sum);
+        }
+    }
+    
+    if (prices.length !== 0) {
+        prices = prices.sort((a, b) => b - a);
+        return prices[0];
+    } else {
+        return -1;
+    }
+}
