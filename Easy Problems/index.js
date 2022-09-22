@@ -384,3 +384,16 @@ function utopianTree(n) {
 
     return height;
 }
+
+
+// 27.Beautiful Days at the Movies
+function beautifulDays(i, j, k) {
+    let result = 0;
+    
+    for (i; i <= j; i++) {
+        let reversedI = parseInt(i.toString().split('').reverse().join(''));
+        if (((i - reversedI) / k) % 1 == 0) result++;
+    }
+
+    return result;
+}
