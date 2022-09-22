@@ -397,3 +397,16 @@ function beautifulDays(i, j, k) {
 
     return result;
 }
+
+
+// 28.Angry Professor
+function angryProfessor(k, a) {
+    let count = 0;
+    
+    a.forEach((elem) => {
+        if (elem <= 0) count++;
+    })
+    
+    if (count < k) return 'YES';
+    else return 'NO'; 
+}
