@@ -430,3 +430,14 @@ function getMoneySpent(keyboards, drives, b) {
         return -1;
     }
 }
+
+
+// 30.Save the Prisoner
+function saveThePrisoner(n, m, s) {
+    let result = (m + s - 1) % n;
+    if (result === 0) {
+        return n
+    } else {
+        return result
+    }
+}
